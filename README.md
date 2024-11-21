@@ -1,4 +1,4 @@
-# Projeto Integrador - Capacita Brasil  
+# Projeto Integrador - Capacita Brasil 🧑‍💻🇧🇷
 **Equipe 3: Sapataria**  
 
 Bem-vindo ao repositório do nosso Projeto Integrador do programa **Capacita Brasil**! Este projeto tem como objetivo a criação de um **site completo** baseado em modelos prontos, refletindo o cenário real do mercado de trabalho, onde frequentemente lidamos com a **manutenção e adaptação de sites existentes**.  
