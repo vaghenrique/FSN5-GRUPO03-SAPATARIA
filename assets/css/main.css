@@ -2613,6 +2613,43 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			.logo-carousel {
+				overflow: hidden;
+				width: 80%;
+				max-width: 1000px;
+				height: 150px;
+				position: relative;
+			}
+			
+			.logo-track {
+				display: flex;
+				align-items: center;
+				animation: 10s infinite slide linear;
+				width: calc(200%); /* Duas vezes o tamanho do carrossel original */
+			}
+			
+			.logo-track img {
+				height: 100px;
+				margin: 0 10px;
+				flex-shrink: 0;
+				transition: transform 0.2s;
+				filter: grayscale(100%); /* Deixa os logos em preto e branco inicialmente */
+			}
+			
+			.logo-track img:hover {
+				transform: scale(1.2); /* Aumenta o logo ao passar o mouse */
+				filter: grayscale(0); /* Remove o efeito preto e branco */
+			}
+			
+			@keyframes slide {
+				from{
+					transform: translateX(0);
+				}
+				to{
+					transform: translateX(-100%);
+				}
+			}			
+
 /* List */
 
 	ol {
@@ -3463,6 +3500,11 @@ input, select, textarea {
 		}
 
 /* Wrapper (main) */
+
+	/*alterei aqui para justificar o texto da página*/
+	#wrapper .inner {
+		text-align: justify;
+	}
 
 	#sidebar + #wrapper {
 		margin-left: 18em;
