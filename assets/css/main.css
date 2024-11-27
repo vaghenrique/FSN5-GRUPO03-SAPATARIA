@@ -4046,3 +4046,33 @@ input, select, textarea {
 			top: 0px;
 			opacity: 1;
 		}
+		#wrapper .wrapper .sub-section-one{
+			justify-content: center;
+			align-items: center;
+			padding-left: 20px;
+		}
+		@media screen and (max-width: 1280px) {
+
+			#wrapper .wrapper .sub-section-one{
+				justify-content: left;
+				padding: 20px 0 20px 20px;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			#wrapper .wrapper .sub-section-one{
+				display: block;
+				padding: 20px 0 0 0;
+			}
+	
+			#wrapper .wrapper .sub-section-one .card{
+				margin: 0 auto;
+			}
+	
+			#wrapper {
+				background-color: rgb(80, 82, 181);
+			}
+
+		}
