@@ -4070,9 +4070,82 @@ input, select, textarea {
 			#wrapper .wrapper .sub-section-one .card{
 				margin: 0 auto;
 			}
-	
-			#wrapper {
-				background-color: rgb(80, 82, 181);
+
+		}
+
+		/*Container de cards*/
+		.container-card{
+			display: grid;
+			background-color: #e0ccec;
+			border-radius: 10px;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: auto;
+			justify-items: center;
+			row-gap: 30px;
+			column-gap: 30px;
+			padding: 30px;
+		}
+
+		.container-card .card{
+			opacity: 0;
+			transform: translateY(20px);
+			transition: opacity 1s ease-out, transform 1s ease-out;
+		}
+
+		.container-card .card.visible{
+			opacity: 1;
+			transform: translateY(0);
+		  }
+
+
+		@media screen and (max-width: 1210px) {
+
+			.container-card{
+				grid-template-columns: 1fr 1fr;
 			}
 
 		}
+
+		@media screen and (max-width: 860px) {
+
+			.container-card{
+				grid-template-columns: 1fr;
+			}
+
+		}
+
+		/*Carrossel de ofertas*/
+		.carousel {
+			overflow: hidden;
+			width: 100%;
+			border-radius: 10px;
+			margin-bottom: 40px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+			position: relative;
+		  }
+		  
+		  .carousel-images {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			animation: slide 25s infinite;
+		  }
+		  
+		  .carousel-images img {
+			object-fit: cover;
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			margin-right: 10px;
+			flex-shrink: 0;
+			transition: transform 0.5s ease-in-out;
+		  }
+		  
+		  @keyframes slide {
+			0% { transform: translateX(0); }
+			20% { transform: translateX(-100%); }
+			40% { transform: translateX(-201%); }
+			60% { transform: translateX(-302%); }
+			80% { transform: translateX(-403%); }
+			100% { transform: translateX(0); }
+		  }
