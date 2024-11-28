@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="/assets/css/produto.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Sapataria Capacita</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Início</a></li>
+						<li><a href="generic.html" class="active">Produtos</a></li>
+					</ul>
+				</nav>
+			</header>
+
+            <div class="small-container single-product">
+            
+            
+                <div class="row">
+                        <div class="col-2">
+                            <img src="images/converse1.webp" width="100%" id="productImg">
+                            
+                            
+                            <div class="small-img-row">
+                                <div class="small-img-col">
+                                    <img src="images/converse1.webp" width="100%" class="small-img">
+                                </div>
+                                 <div class="small-img-col">
+                                    <img src="images/converse3.webp" width="100%" class="small-img">
+                                </div>
+                                 <div class="small-img-col">
+                                    <img src="images/converse4.webp" width="100%" class="small-img">
+                                </div>
+                                 <div class="small-img-col">
+                                    <img src="images/converse5.webp" width="100%" class="small-img">
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-2">
+                            <p>Início / Produtos</p>
+                            <h1>Converse Unissex Run Star Motion</h1>
+                            <h4>R$ 649.99</h4>
+                            <select>
+                                <option>Escolha o tamanho</option>
+                                <option>37</option>
+                                <option>38</option>
+                                <option>39</option>
+                                <option>40</option>
+                                <option>41</option>
+                                <option>42</option>
+                                <option>43</option>
+                            </select>
+                            <input type="number" value="1" min="1" max="10">
+                            <a class="btn">Comprar</a>
+                            <h3>Detalhes do Produto</h3>
+                            <br>
+                            <p>Refletindo a energia das ruas da cidade, as linhas divertidas e distorcidas do Run Star Motion são feitas para o movimento do futuro. Reimaginado de dentro para fora, o posicionamento elevado e a entressola leve em espuma CX proporcionam conforto de outro nível a cada passo. Esta edição está mais limpa do que nunca, com um design monocromático que combina facilmente com qualquer peça do seu guarda-roupa.</p>
+                        </div>
+                    </div>
+                </div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script>
+                var productImg=document.getElementById("productImg");
+                var smallImg=document.getElementsByClassName("small-img");
+                
+                smallImg[0].onclick=function(){
+                    productImg.src=smallImg[0].src;
+                }
+                 smallImg[1].onclick=function(){
+                    productImg.src=smallImg[1].src;
+                }
+                  smallImg[2].onclick=function(){
+                    productImg.src=smallImg[2].src;
+                }
+                   smallImg[3].onclick=function(){
+                    productImg.src=smallImg[3].src;
+                }
+            </script>
+
+	</body>
+</html>
