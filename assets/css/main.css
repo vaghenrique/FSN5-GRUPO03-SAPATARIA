@@ -2625,7 +2625,7 @@ input, select, textarea {
 				display: flex;
 				align-items: center;
 				animation: 10s infinite slide linear;
-				width: calc(200%); /* Duas vezes o tamanho do carrossel original */
+				width: calc(100%); /* Duas vezes o tamanho do carrossel original */
 			}
 			
 			.logo-track img {
@@ -2646,7 +2646,7 @@ input, select, textarea {
 					transform: translateX(0);
 				}
 				to{
-					transform: translateX(-100%);
+					transform: translateX(-50%);
 				}
 			}			
 
