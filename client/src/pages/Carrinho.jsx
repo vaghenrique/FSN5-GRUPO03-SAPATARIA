@@ -5,7 +5,7 @@ const Carrinho = () => {
   return (
     <Wrapper>
       <div className="main">
-        
+        carrin
       </div>
     </Wrapper>
   )
