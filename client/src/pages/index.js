@@ -1,0 +1,5 @@
+export {default as HomeLayout} from './HomeLayout'
+export {default as ErrorPage} from './ErrorPage'
+export {default as Home} from './Home'
+export {default as Vitrine} from './Vitrine'
+export {default as Carrinho} from './Carrinho'
