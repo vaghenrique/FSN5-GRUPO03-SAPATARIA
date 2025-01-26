@@ -9,7 +9,7 @@ const Footer = () => {
           className="text-center p-3"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
-          © 2021 Desenvolvido por:
+          © 2025 Desenvolvido por:
         </div>
       </footer>
     </Wrapper>
