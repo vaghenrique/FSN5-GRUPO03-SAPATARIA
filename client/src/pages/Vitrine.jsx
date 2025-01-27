@@ -1,8 +1,8 @@
-import React from 'react'
+import { Wrapper } from "../assets/wrappers/Vitrine"
 
 const Vitrine = () => {
   return (
-    <div>Vitrine</div>
+    <Wrapper>Vitrine</Wrapper>
   )
 }
 
