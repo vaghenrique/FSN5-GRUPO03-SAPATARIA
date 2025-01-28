@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logoBranca from "../assets/img/logo-branca.png";
+import { FaShoppingCart } from "react-icons/fa";
 
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
@@ -12,6 +13,9 @@ const StyledNavLink = styled(NavLink)`
   color: white;
   margin: 0 25px;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
   &:hover {
     transition: all linear 0.3s;
@@ -35,7 +39,7 @@ const Header = () => {
           <Nav className="ms-auto">
             <StyledNavLink to="/">Início</StyledNavLink>
             <StyledNavLink to="/vitrine">Vitrine</StyledNavLink>
-            <StyledNavLink to="/carrinho">Carrinho</StyledNavLink>
+            <StyledNavLink to="/carrinho"><FaShoppingCart /> Carrinho</StyledNavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
