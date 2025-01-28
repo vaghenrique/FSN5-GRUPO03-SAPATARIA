@@ -18,7 +18,7 @@ const Footer = () => {
               {itens.map((itens) => (
                   <div className="col-md-2" key={itens.id}>
                     <h6 className="text-uppercase font-weight-bold">
-                      <NavLink to={item.nome === "Início" ? "/" : }`} className="text-white">
+                      <NavLink to={itens.nome === "Início" ? "/" : `/${itens.nome.toLowerCase()}`} className="text-white">
                         {itens.nome}
                       </NavLink>
                     </h6>

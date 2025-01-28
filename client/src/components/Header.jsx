@@ -19,7 +19,7 @@ const StyledNavLink = styled(NavLink)`
 
   &:hover {
     transition: all linear 0.3s;
-    color: #b4b4b4;
+    color: #1900ff;
   }
 `;
 
