@@ -1,108 +1,70 @@
+import { NavLink } from "react-router-dom";
+
+const itens = [
+  {nome: "Início", id: 1},
+   {nome: "Vitrine", id: 2},
+   {nome: "Carrinho", id: 3},
+  ]
+
 const Footer = () => {
   return (
-    <>
-      <div className="container my-5">
+      <footer
+        className="text-center text-white"
+        style={{ backgroundColor: "#233ed2" }}
+      >
+        <div className="container">
+          <section className="mt-5">
+            <div className="row text-center d-flex justify-content-center pt-5">
+              {itens.map((itens) => (
+                  <div className="col-md-2" key={itens.id}>
+                    <h6 className="text-uppercase font-weight-bold">
+                      <NavLink to={item.nome === "Início" ? "/" : }`} className="text-white">
+                        {itens.nome}
+                      </NavLink>
+                    </h6>
+                  </div>
+                )
+              )}
+            </div>
+          </section>
 
-        <footer className="text-center text-white" style="background-color: #3f51b5">
+          <hr className="my-5" />
 
-          <div className="container">
-
-            <section className="mt-5">
-
-              <div className="row text-center d-flex justify-content-center pt-5">
-
-                <div className="col-md-2">
-                  <h6 className="text-uppercase font-weight-bold">
-                    <a href="#!" className="text-white">About us</a>
-                  </h6>
-                </div>
-
-
-
-                <div className="col-md-2">
-                  <h6 className="text-uppercase font-weight-bold">
-                    <a href="#!" className="text-white">Products</a>
-                  </h6>
-                </div>
-
-
-
-                <div className="col-md-2">
-                  <h6 className="text-uppercase font-weight-bold">
-                    <a href="#!" className="text-white">Awards</a>
-                  </h6>
-                </div>
-
-
-
-                <div className="col-md-2">
-                  <h6 className="text-uppercase font-weight-bold">
-                    <a href="#!" className="text-white">Help</a>
-                  </h6>
-                </div>
-
-
-
-                <div className="col-md-2">
-                  <h6 className="text-uppercase font-weight-bold">
-                    <a href="#!" className="text-white">Contact</a>
-                  </h6>
-                </div>
-
+          <section className="mb-5">
+            <div className="row d-flex justify-content-center">
+              <div className="col-lg-8">
+                <p>
+                Na FSN5 Store, você encontra uma seleção incrível de produtos variados para facilitar o seu dia a dia e transformar sua rotina. Com qualidade, preços imbatíveis e novidades sempre à vista, somos o destino certo para quem busca variedade e praticidade. Venha nos visitar e descubra o que temos de especial hoje para você! 🚀🛍️
+                </p>
               </div>
-            </section>
+            </div>
+          </section>
 
-            <hr className="my-5" />
+          <section className="text-center mb-5">
+            {[
+              { icon: "facebook-f", label: "Facebook" },
+              { icon: "twitter", label: "Twitter" },
+              { icon: "instagram", label: "Instagram" },
+            ].map((social, index) => (
+              <a
+                href="#!"
+                className="text-white me-4"
+                aria-label={social.label}
+                key={index}
+              >
+                <i className={`fab fa-${social.icon}`}></i>
+              </a>
+            ))}
+          </section>
+        </div>
 
-            <section className="mb-5">
-              <div className="row d-flex justify-content-center">
-                <div className="col-lg-8">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                    distinctio earum repellat quaerat voluptatibus placeat nam,
-                    commodi optio pariatur est quia magnam eum harum corrupti
-                    dicta, aliquam sequi voluptate quas.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-
-
-            <section className="text-center mb-5">
-              <a href="" className="text-white me-4">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="" className="text-white me-4">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="" className="text-white me-4">
-                <i className="fab fa-google"></i>
-              </a>
-              <a href="" className="text-white me-4">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="" className="text-white me-4">
-                <i className="fab fa-linkedin"></i>
-              </a>
-              <a href="" className="text-white me-4">
-                <i className="fab fa-github"></i>
-              </a>
-            </section>
-          </div>
-
-          <div
-            className="text-center p-3"
-            style="background-color: rgba(0, 0, 0, 0.2)"
-          >
-            © 2020 Copyright:
-            <a className="text-white" href="https://mdbootstrap.com/"
-            >MDBootstrap.com</a
-            >
-          </div>
-        </footer>
-      </div>
-    </>
+        <div
+          className="text-center p-3"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        >
+          © Desenvolvido por: <a className="text-white" href="https://github.com/vaghenrique/FSN5-GRUPO03-SAPATARIA">Equipe 03 - FSN5.</a>
+        </div>
+      </footer>
   );
 };
 
