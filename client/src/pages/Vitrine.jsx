@@ -27,7 +27,7 @@ const itens = [
   {nome:"Jordan one take 4", preco_big:"R$ 669.", preco_small:"99", link:nike_jordan, id:9},
   {nome:"Olympikus Acqua", preco_big:"R$ 189.", preco_small:"00", link:olympikus_aqua, id:10},
   {nome:"Olympikus Difuse 4", preco_big:"R$ 179.", preco_small:"99", link:olympikus_difuse, id:11},
-  {nome:"Polo joy casual", preco_big:"R$ 99.", preco_small:"90", link:poly_joy, id:10},
+  {nome:"Polo joy casual", preco_big:"R$ 99.", preco_small:"90", link:poly_joy, id:12},
 ]
 
 const Vitrine = () => {
