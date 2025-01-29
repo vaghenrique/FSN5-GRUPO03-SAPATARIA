@@ -22,6 +22,26 @@ const StyledNavLink = styled(NavLink)`
     color: #1900ff;
   }
 `;
+const ShoppingCart = styled.div`
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  margin: 0 25px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 300px;
+  display: block;
+
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
+  &:hover {
+    transition: all linear 0.3s;
+    color: #1900ff;
+  }
+`;
 
 const StyledLogo = styled.img`
   width: 200px;
@@ -39,7 +59,10 @@ const Header = () => {
           <Nav className="ms-auto">
             <StyledNavLink to="/">Início</StyledNavLink>
             <StyledNavLink to="/vitrine">Vitrine</StyledNavLink>
-            <StyledNavLink to="/carrinho"><FaShoppingCart /> Carrinho</StyledNavLink>
+            <StyledNavLink to="/carrinho"> Carrinho</StyledNavLink>
+            <ShoppingCart className="shoppingCart">
+              <FaShoppingCart onClick={()=> console.log("teste")} />
+            </ShoppingCart>
           </Nav>
         </Navbar.Collapse>
       </Container>

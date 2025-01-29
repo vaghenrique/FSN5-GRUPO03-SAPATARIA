@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const buttonStyles = {
   primary: `
-    background-color: #ffffff;
-    color: #0f0e0e;
+    background-color: #0d6efd;
+    color: #ffff;
     border: none;
 
     &:hover {
