@@ -20,7 +20,7 @@ const StyledButton = styled.button`
 
 const Button = ({name,action}) => {
   return (
-    <StyledButton>{name}</StyledButton>
+    <StyledButton onClick={action}>{name}</StyledButton>
   )
 }
 export default Button

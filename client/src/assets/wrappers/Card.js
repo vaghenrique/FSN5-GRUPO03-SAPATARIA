@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     background: #0D6EFD;
 	border-radius: 20px;
 	overflow: hidden;
+    cursor: pointer;
 }
 
 .card:before{
