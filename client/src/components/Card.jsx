@@ -15,7 +15,7 @@ const Card = ({nome, preco_big, preco_small, link, id}) => {
           <div className='contentBx'>
               <h3>{nome}</h3>
               <h2 className='price'>{preco_big}<span>{preco_small}</span></h2>
-              <a href="#" className='buy' onClick={ () => console.log("teste")}>Compre Agora</a>
+              <a href="#" className='buy'>Mais Detalhes</a>
           </div>
       </div>
     </Wrapper>

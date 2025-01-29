@@ -6,6 +6,12 @@ const itens = [
    {nome: "Carrinho", id: 3},
   ]
 
+  const socials = [
+    {nome: "Facebook", id: 1, link: "https://www.facebook.com/avantiatlantico", icon: "facebook-f"},
+    {nome: "Twitter", id: 2, link: "https://x.com/ifceoficial", icon: "twitter"},
+    {nome: "Instagram", id: 3, link: "https://www.instagram.com/avanti.ia", icon: "instagram"},
+  ]
+
 const Footer = () => {
   return (
       <footer
@@ -41,18 +47,14 @@ const Footer = () => {
           </section>
 
           <section className="text-center mb-5">
-            {[
-              { icon: "facebook-f", label: "Facebook" },
-              { icon: "twitter", label: "Twitter" },
-              { icon: "instagram", label: "Instagram" },
-            ].map((social, index) => (
+            {socials.map((socials) => (
               <a
-                href="#!"
+                href={socials.link}
                 className="text-white me-4"
-                aria-label={social.label}
-                key={index}
+                aria-label={socials.nome}
+                key={socials.id}
               >
-                <i className={`fab fa-${social.icon}`}></i>
+                <i className={`fab fa-${socials.icon}`}></i>
               </a>
             ))}
           </section>
