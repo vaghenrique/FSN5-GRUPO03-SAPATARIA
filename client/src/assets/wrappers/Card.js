@@ -147,7 +147,9 @@ export const Wrapper = styled.div`
     z-index: 10000;
     animation: fade-in 0.5s;
     display: block;
-}
+    overflow: auto; /* Mantém o scroll funcional */
+    scrollbar-width: none; /* Para Firefox */
+  }
 
 .close-button{
     position: absolute;
@@ -159,7 +161,7 @@ export const Wrapper = styled.div`
     border: 0;
     background-color: #0D6EFD;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
 }
 
@@ -218,6 +220,11 @@ export const Wrapper = styled.div`
 
 h4{
     font-weight: normal;
+}
+
+h6{
+  color: #fff;
+  cursor: pointer;
 }
 
 .col-4 p{

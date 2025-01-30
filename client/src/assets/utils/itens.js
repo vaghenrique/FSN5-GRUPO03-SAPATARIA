@@ -1,4 +1,10 @@
 import imagem from "../img/endo_run.png";
+import endo_1 from "../img/endo_1.webp";
+import endo_2 from "../img/endo_2.webp";
+import endo_3 from "../img/endo_3.webp";
+import endo_4 from "../img/endo_4.webp";
+import endo_main from "../img/endo_main.webp";
+
 import addidas_cp from "../img/adidas-cp.png";
 import olympikus_vertical from "../img/olymoikus_vertical.png";
 import fila_street from "../img/fila_street.png";
@@ -18,7 +24,7 @@ const itens = [
     preco_small: "99",
     link: imagem,
     id: 1,
-    price: "227.99",
+    price: "227.99", photo_main: endo_main, photo_one: endo_1, photo_two: endo_2, photo_three: endo_3, photo_four: endo_4,
   },
   {
     nome: "Adidas Manchester",

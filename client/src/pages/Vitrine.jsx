@@ -31,6 +31,11 @@ const Vitrine = () => {
               link={item.link}
               id={item.id}
               price={item.price}
+              photo_one={item.photo_one}
+              photo_two={item.photo_two}
+              photo_three={item.photo_three}
+              photo_four={item.photo_four}
+              photo_main={item.photo_main}
             />
           ))
         ) : (

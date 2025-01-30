@@ -6,12 +6,16 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 
-const Card = ({ nome, preco_big, preco_small, link, id, price, photo_one, photo_two, photo_three, photo_four}) => {
+const Card = ({ nome, preco_big, preco_small, link, id, price, photo_main, photo_one, photo_two, photo_three, photo_four}) => {
   const dispatch = useDispatch();
+
   const [modal, setModal] = useState(false);
 
+  const [mainImage, setMainImage] = useState(link);
+
   const toggleModal = () => {
-    setModal(!modal)
+    setModal(!modal);
+    setMainImage(link);
   }
 
   const handleAddToCart = () => {
@@ -56,26 +60,26 @@ const Card = ({ nome, preco_big, preco_small, link, id, price, photo_one, photo_
                 <div className="small-container single-product">
                   <div className="row">
                     <div className="col-2">
-                      <img src={link} alt={nome} id="productImg"/>
+                      <img src={mainImage} alt={nome} id="productImg"/>
 
                       <div className="small-img-row">
                         <div className="small-img-col">
-                          <img src={photo_one} alt={nome} className="small-img"/>
+                          <img src={photo_one} alt={nome} onClick={() => setMainImage(photo_one)} className="small-img"/>
                         </div>
                         <div className="small-img-col">
-                          <img src={photo_two} alt={nome} className="small-img"/>
+                          <img src={photo_two} alt={nome} onClick={() => setMainImage(photo_two)} className="small-img"/>
                         </div>
                         <div className="small-img-col">
-                          <img src={photo_three} alt={nome} className="small-img"/>
+                          <img src={photo_three} alt={nome} onClick={() => setMainImage(photo_three)} className="small-img"/>
                         </div>
                         <div className="small-img-col">
-                          <img src={photo_four} alt={nome} className="small-img"/>
+                          <img src={photo_four} alt={nome} onClick={() => setMainImage(photo_four)} className="small-img"/>
                         </div>
                       </div>
                     </div>
 
                     <div className="col-2">
-                    <p>Início / Produtos</p>
+                    <h6 onClick={toggleModal}>Início / Produtos</h6>
                         <h1>{nome}</h1>
                         <h4>R$ {price}</h4>
                         <select>
