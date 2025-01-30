@@ -1,9 +1,8 @@
-import React from 'react'
-import Carrossel from '../components/Carrossel'
-import Card from '../components/Card'
-import { Wrapper } from '../assets/wrappers/Home'
-import Button from '../components/Button'
-import itens from "../assets/utils/itens.js"
+import Carrossel from "../components/Carrossel";
+import Card from "../components/Card";
+import { Wrapper } from "../assets/wrappers/Home";
+import Button from "../components/Button";
+import itens from "../assets/utils/itens.js";
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -11,12 +10,12 @@ const Home = () => {
     <>
       <Carrossel />
       <Wrapper>
-        <div className='parag-home'>
-          <p className='paragrafo_home'>Seção Masculina</p>
-          <div className='container-card'>
+        <div className="parag-home">
+          <p className="paragrafo_home">Seção Masculina</p>
+          <div className="container-card">
             {itens.slice(0, 3).map((itens) => (
               <Card
-              key={itens.id}
+                key={itens.id}
                 nome={itens.nome}
                 preco_big={itens.preco_big}
                 preco_small={itens.preco_small}
@@ -27,13 +26,15 @@ const Home = () => {
             ))}
           </div>
           <div className="botao-container">
-          <NavLink to="/vitrine"><Button name="Ver mais" href="/vitrine" /></NavLink>
+            <NavLink to="/vitrine">
+              <Button name="Ver mais" href="/vitrine" />
+            </NavLink>
           </div>
         </div>
 
-        <div className='parag-home'>
-          <p className='paragrafo_home'>Seção Feminina</p>
-          <div className='container-card'>
+        <div className="parag-home">
+          <p className="paragrafo_home">Seção Feminina</p>
+          <div className="container-card">
             {itens.slice(3, 6).map((itens) => (
               <Card
                 nome={itens.nome}
@@ -46,13 +47,15 @@ const Home = () => {
             ))}
           </div>
           <div className="botao-container">
-          <NavLink to="/vitrine"><Button name="Ver mais" href="/vitrine" /></NavLink>
+            <NavLink to="/vitrine">
+              <Button name="Ver mais" href="/vitrine" />
+            </NavLink>
           </div>
         </div>
 
-        <div className='parag-home'>
-          <p className='paragrafo_home'>Seção Infantil</p>
-          <div className='container-card'>
+        <div className="parag-home">
+          <p className="paragrafo_home">Seção Infantil</p>
+          <div className="container-card">
             {itens.slice(12, 15).map((itens) => (
               <Card
                 nome={itens.nome}
@@ -65,12 +68,14 @@ const Home = () => {
             ))}
           </div>
           <div className="botao-container">
-            <NavLink to="/vitrine"><Button name="Ver mais" href="/vitrine" /></NavLink>
+            <NavLink to="/vitrine">
+              <Button name="Ver mais" href="/vitrine" />
+            </NavLink>
           </div>
         </div>
       </Wrapper>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
