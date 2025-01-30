@@ -18,7 +18,7 @@ const Home = () => {
             <Card nome={"Endo Run"} preco_big={"R$ 227."} preco_small={"99"} link={imagem} />
           </div>
           <div className="botao-container">
-            <Button name="Ver mais mais mais" />
+            <Button name="Ver mais" />
           </div>
         </div>
 

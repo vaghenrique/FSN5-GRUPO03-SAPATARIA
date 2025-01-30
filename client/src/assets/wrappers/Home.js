@@ -18,10 +18,6 @@ export const Wrapper = styled.div`
     font-size: 20px;
 }
 
-.botao-container Button{
-    width: 30px;
-}
-
 .container-card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -31,7 +27,6 @@ export const Wrapper = styled.div`
     column-gap: 0px;
     padding: 30px;
 }
-
 
 @media screen and (max-width: 1210px) {
 

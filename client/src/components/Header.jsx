@@ -6,6 +6,12 @@ import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logoBranca from "../assets/img/logo-branca.png";
 import { FaShoppingCart } from "react-icons/fa";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { FaSearch } from "react-icons/fa";
+
 
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
@@ -31,7 +37,6 @@ const ShoppingCart = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-left: 300px;
   display: block;
 
   @media screen and (max-width: 992px) {
@@ -51,19 +56,33 @@ const Header = () => {
   return (
     <Navbar expand="lg" bg="primary">
       <Container>
-        <Navbar.Brand href=".">
+        <Navbar.Brand href="/">
           <StyledLogo src={logoBranca} alt="Logo Loja" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
+          <Form inline>
+        <Row>
+          <Col xs="auto">
+            <Form.Control
+              type="text"
+              placeholder="Pesquisar"
+              className=" mr-sm-2"
+            />
+          </Col>
+          <Col xs="auto">
+            <Button type="submit" style={{ backgroundColor: "#0657d1" }}><FaSearch /></Button>
+          </Col>
+        </Row>
+      </Form>
             <StyledNavLink to="/">Início</StyledNavLink>
             <StyledNavLink to="/vitrine">Vitrine</StyledNavLink>
             <StyledNavLink to="/carrinho"> Carrinho</StyledNavLink>
-            <ShoppingCart className="shoppingCart">
+          </Nav>
+          <ShoppingCart className="shoppingCart">
               <FaShoppingCart onClick={()=> console.log("teste")} />
             </ShoppingCart>
-          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
