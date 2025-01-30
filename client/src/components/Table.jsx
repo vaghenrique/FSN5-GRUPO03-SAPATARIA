@@ -13,6 +13,7 @@ const TableComponent = ({ items, onRemove }) => {
         <TableHead>
           <TableRow>
             <TableCell>Item</TableCell>
+            <TableCell>Imagem</TableCell>
             <TableCell>Quantidade</TableCell>
             <TableCell>Preço Unitário</TableCell>
             <TableCell>Preço Total</TableCell>
@@ -23,10 +24,26 @@ const TableComponent = ({ items, onRemove }) => {
           {items.map((item) => (
             <TableRow key={item.id}>
               <TableCell>{item.nome}</TableCell>
+              <TableCell>
+                <div
+                  style={{ width: "50px", height: "50px", overflow: "hidden" }}
+                >
+                  <img
+                    src={item.link}
+                    alt={item.nome}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              </TableCell>
               <TableCell>{item.quantidade}</TableCell>
               <TableCell>R$ {item.price}</TableCell>
               <TableCell>
-                R$ {(Number(item.price) * Number(item.quantidade || 1)).toFixed(2)}
+                R${" "}
+                {(Number(item.price) * Number(item.quantidade || 1)).toFixed(2)}
               </TableCell>
               <TableCell>
                 <Button

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   .main {
@@ -19,6 +19,6 @@ export const Wrapper = styled.div`
     background-color: #f5f5f5;
     border-radius: 8px;
     text-align: center;
+    margin-bottom: 300px;
   }
 `;
-
