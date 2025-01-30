@@ -2,9 +2,9 @@ import React from 'react'
 import Carrossel from '../components/Carrossel'
 import Card from '../components/Card'
 import { Wrapper } from '../assets/wrappers/Home'
-import imagem from "../assets/img/endo_run.png"
 import Button from '../components/Button'
 import itens from "../assets/utils/itens.js"
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -26,7 +26,7 @@ const Home = () => {
             ))}
           </div>
           <div className="botao-container">
-            <Button name="Ver mais" />
+          <NavLink to="/vitrine"><Button name="Ver mais" href="/vitrine" /></NavLink>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ const Home = () => {
             ))}
           </div>
           <div className="botao-container">
-            <Button name="Ver mais" />
+          <NavLink to="/vitrine"><Button name="Ver mais" href="/vitrine" /></NavLink>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ const Home = () => {
             ))}
           </div>
           <div className="botao-container">
-            <Button name="Ver mais" href="/vitrine" />
+            <NavLink to="/vitrine"><Button name="Ver mais" href="/vitrine" /></NavLink>
           </div>
         </div>
       </Wrapper>
