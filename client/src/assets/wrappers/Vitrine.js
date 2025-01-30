@@ -2,6 +2,15 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
 
+p{
+    font-family: "Varela Round", serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
 .container-card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
