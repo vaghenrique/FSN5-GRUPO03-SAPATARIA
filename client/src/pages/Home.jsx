@@ -27,7 +27,7 @@ const Home = () => {
           </div>
           <div className="botao-container">
             <NavLink to="/vitrine">
-              <Button name="Ver mais" href="/vitrine" />
+              <Button name="Ver mais" href="/vitrine" onClick={()=> window.scrollTo({top: 0, behavior: "smooth"})}/>
             </NavLink>
           </div>
         </div>
@@ -48,7 +48,7 @@ const Home = () => {
           </div>
           <div className="botao-container">
             <NavLink to="/vitrine">
-              <Button name="Ver mais" href="/vitrine" />
+              <Button name="Ver mais" href="/vitrine" onClick={()=> window.scrollTo({top: 0, behavior: "smooth"})}/>
             </NavLink>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Home = () => {
           </div>
           <div className="botao-container">
             <NavLink to="/vitrine">
-              <Button name="Ver mais" href="/vitrine" />
+              <Button name="Ver mais" href="/vitrine" onClick={()=> window.scrollTo({top: 0, behavior: "smooth"})}/>
             </NavLink>
           </div>
         </div>
