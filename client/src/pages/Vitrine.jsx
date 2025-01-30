@@ -21,6 +21,7 @@ const Vitrine = () => {
           />
         ))}
       </div>
+      
     </Wrapper>
   );
 };
