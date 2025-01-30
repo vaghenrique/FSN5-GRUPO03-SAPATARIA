@@ -11,7 +11,8 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { FaSearch } from "react-icons/fa";
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
@@ -53,7 +54,19 @@ const StyledLogo = styled.img`
 `;
 
 const Header = () => {
+
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (search.trim() !== "") {
+      navigate(`/vitrine?search=${encodeURIComponent(search)}`);
+    }
+  };
+
   return (
+
     <Navbar expand="lg" bg="primary">
       <Container>
         <Navbar.Brand href="/">
@@ -62,27 +75,29 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-          <Form inline>
-        <Row>
-          <Col xs="auto">
-            <Form.Control
-              type="text"
-              placeholder="Pesquisar"
-              className=" mr-sm-2"
-            />
-          </Col>
-          <Col xs="auto">
-            <Button type="submit" style={{ backgroundColor: "#0657d1" }}><FaSearch /></Button>
-          </Col>
-        </Row>
-      </Form>
+            <Form inline onSubmit={handleSearch}>
+              <Row>
+                <Col xs="auto">
+                  <Form.Control
+                    type="text"
+                    placeholder="Pesquisar"
+                    className="mr-sm-2"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                </Col>
+                <Col xs="auto">
+                  <Button type="submit" style={{ backgroundColor: "#0657d1" }}><FaSearch /></Button>
+                </Col>
+              </Row>
+            </Form>
             <StyledNavLink to="/">Início</StyledNavLink>
             <StyledNavLink to="/vitrine">Vitrine</StyledNavLink>
             <StyledNavLink to="/carrinho"> Carrinho</StyledNavLink>
           </Nav>
           <ShoppingCart className="shoppingCart">
-              <FaShoppingCart onClick={()=> console.log("teste")} />
-            </ShoppingCart>
+            <FaShoppingCart onClick={() => console.log("teste")} />
+          </ShoppingCart>
         </Navbar.Collapse>
       </Container>
     </Navbar>

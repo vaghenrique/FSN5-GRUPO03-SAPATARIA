@@ -1,27 +1,41 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import Card from "../components/Card";
 import itens from "../assets/utils/itens.js"
-
 import { Wrapper } from "../assets/wrappers/Vitrine";
 
-
+const useQuery = () => {
+  return new URLSearchParams(useLocation().search);
+};
 
 const Vitrine = () => {
+
+  const query = useQuery();
+  const search = query.get("search")?.toLowerCase() || "";
+
+  const produtosFiltrados = itens.filter((item) =>
+    item.nome.toLowerCase().includes(search)
+  );
+
   return (
     <Wrapper>
       <div className="container-card">
-        {itens.map((itens) => (
-          <Card
-            nome={itens.nome}
-            preco_big={itens.preco_big}
-            preco_small={itens.preco_small}
-            link={itens.link}
-            id={itens.id}
-            price={itens.price}
-          />
-        ))}
+        {produtosFiltrados.length > 0 ? (
+          produtosFiltrados.map((item) => (
+            <Card
+              key={item.id}
+              nome={item.nome}
+              preco_big={item.preco_big}
+              preco_small={item.preco_small}
+              link={item.link}
+              id={item.id}
+              price={item.price}
+            />
+          ))
+        ) : (
+          <p>Nenhum produto encontrado.</p>
+        )}
       </div>
-      
     </Wrapper>
   );
 };
