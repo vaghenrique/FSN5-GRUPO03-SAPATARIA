@@ -19,7 +19,7 @@ const Vitrine = () => {
 
   return (
     <Wrapper>
-      <p>Vitrine</p>
+      <p className="vitrine-p">Vitrine</p>
       <div className="container-card">
         {produtosFiltrados.length > 0 ? (
           produtosFiltrados.map((item) => (
