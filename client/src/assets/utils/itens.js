@@ -10,6 +10,9 @@ import nike_jordan from "../img/nike-jordan.png";
 import olympikus_aqua from "../img/olympikus_aqua.png";
 import olympikus_difuse from "../img/olympikus_difuse.png";
 import poly_joy from "../img/poly_joy.png";
+import vertus from "../img/VertusCasual.png";
+import kidy from "../img/KidyInfantil.png";
+import dnaflex from "../img/DnaFlex.png";
 
 const itens = [
   {
@@ -108,6 +111,30 @@ const itens = [
     id: 12,
     price: "99.90",
   },
+  {
+    nome: "Vertus Casual",
+    preco_big: "R$ 79.",
+    preco_small: "90",
+    link: vertus,
+    id: 13,
+    price: "79.90",
+  },
+  {
+    nome: "Kidy Infantil Preto-Pink",
+    preco_big: "R$ 84.",
+    preco_small: "99",
+    link: kidy,
+    id: 14,
+    price: "84.99",
+  },
+  {
+    nome: "Ortopé DNA Flex",
+    preco_big: "R$ 99.",
+    preco_small: "90",
+    link: dnaflex,
+    id: 15,
+    price: "99.90",
+  }
 ];
 
 export default itens;

@@ -53,7 +53,7 @@ const Home = () => {
         <div className='parag-home'>
           <p className='paragrafo_home'>Seção Infantil</p>
           <div className='container-card'>
-            {itens.slice(6, 9).map((itens) => (
+            {itens.slice(12, 15).map((itens) => (
               <Card
                 nome={itens.nome}
                 preco_big={itens.preco_big}

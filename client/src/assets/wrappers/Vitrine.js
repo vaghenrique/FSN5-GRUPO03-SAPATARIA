@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
 
-p{
+.vitrine-p{
     font-family: "Varela Round", serif;
     font-size: 40px;
     font-weight: 600;
