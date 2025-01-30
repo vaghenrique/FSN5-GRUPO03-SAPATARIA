@@ -16,6 +16,7 @@ const Home = () => {
           <div className='container-card'>
             {itens.slice(0, 3).map((itens) => (
               <Card
+              key={itens.id}
                 nome={itens.nome}
                 preco_big={itens.preco_big}
                 preco_small={itens.preco_small}

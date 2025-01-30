@@ -2,6 +2,8 @@ import { Wrapper } from "../assets/wrappers/Card";
 import { MdAddShoppingCart } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { addItem } from "../store/cartSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 
 const Card = ({ nome, preco_big, preco_small, link, id, price, photo_one, photo_two, photo_three, photo_four}) => {
@@ -21,10 +23,13 @@ const Card = ({ nome, preco_big, preco_small, link, id, price, photo_one, photo_
     };
 
     dispatch(addItem(produto));
+
+    toast.success("O produto foi adicionado ao carrinho com sucesso !");
   };
 
   return (
     <Wrapper>
+      <ToastContainer />
       <div className="card">
         <div className="cart-icon">
           <MdAddShoppingCart onClick={handleAddToCart} />

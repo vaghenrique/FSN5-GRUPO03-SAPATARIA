@@ -18,7 +18,7 @@ const itens = [
     preco_small: "99",
     link: imagem,
     id: 1,
-    price: "227,99",
+    price: "227.99",
   },
   {
     nome: "Adidas Manchester",
@@ -26,7 +26,7 @@ const itens = [
     preco_small: "99",
     link: addidas_cp,
     id: 2,
-    price: "899,99",
+    price: "899.99",
   },
   {
     nome: "Olympikus Vertical",
@@ -34,7 +34,7 @@ const itens = [
     preco_small: "83",
     link: olympikus_vertical,
     id: 3,
-    price: "307,83",
+    price: "307.83",
   },
   {
     nome: "Fila Street Fit",
@@ -42,7 +42,7 @@ const itens = [
     preco_small: "00",
     link: fila_street,
     id: 4,
-    price: "360,00",
+    price: "360.00",
   },
   {
     nome: "Fila Tormo",
@@ -50,7 +50,7 @@ const itens = [
     preco_small: "99",
     link: fila_tormo,
     id: 5,
-    price: "369,99",
+    price: "369.99",
   },
   {
     nome: "grand Court 2.0",
@@ -58,7 +58,7 @@ const itens = [
     preco_small: "99",
     link: grand_court,
     id: 6,
-    price: "219,99",
+    price: "219.99",
   },
   {
     nome: "New Balance 480",
@@ -66,7 +66,7 @@ const itens = [
     preco_small: "99",
     link: new_balance,
     id: 7,
-    price: "499,99",
+    price: "499.99",
   },
   {
     nome: "Nike Air Max Intrlk",
@@ -74,7 +74,7 @@ const itens = [
     preco_small: "99",
     link: nike_air_max,
     id: 8,
-    price: "599,99",
+    price: "599.99",
   },
   {
     nome: "Jordan one take 4",
@@ -82,7 +82,7 @@ const itens = [
     preco_small: "99",
     link: nike_jordan,
     id: 9,
-    price: "669,99",
+    price: "669.99",
   },
   {
     nome: "Olympikus Acqua",
@@ -90,7 +90,7 @@ const itens = [
     preco_small: "00",
     link: olympikus_aqua,
     id: 10,
-    price: "189,00",
+    price: "189.00",
   },
   {
     nome: "Olympikus Difuse 4",
@@ -98,7 +98,7 @@ const itens = [
     preco_small: "99",
     link: olympikus_difuse,
     id: 11,
-    price: "170,99",
+    price: "170.99",
   },
   {
     nome: "Polo joy casual",
@@ -106,8 +106,8 @@ const itens = [
     preco_small: "90",
     link: poly_joy,
     id: 12,
-    price: "99,90",
+    price: "99.90",
   },
 ];
 
-export default itens
+export default itens;
