@@ -283,6 +283,7 @@ input:focus{
 
 #productImg{
     width: 100%;
+    margin-bottom: 5px;
 }
 
 @media only screen and (max-width:600px){
